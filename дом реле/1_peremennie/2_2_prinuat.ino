@@ -28,18 +28,18 @@ void callback(char* topic, byte* payload, unsigned int length) {
   }
 
   if ( String(topic) == podpiskanasvetstola) {
-    if (data_pay == "0") svetstola = 1;
-    if (data_pay == "1") svetstola = 0;
+    if (data_pay == "1") svetstola = 1;
+    if (data_pay == "0") svetstola = 0;
     client.publish("dom/svetstolaotpravka", String(svetstola).c_str());
   }
   if ( String(topic) == podpiskanakolonki) {
-    if (data_pay == "0") kolonki = 1;
-    if (data_pay == "1") kolonki = 0;
+    if (data_pay == "1") kolonki = 1;
+    if (data_pay == "0") kolonki = 0;
     client.publish("dom/kolonkiotpravka", String(kolonki).c_str());
   }
   if ( String(topic) == podpiskanarozetka) {
-    if (data_pay == "0") rozetka = 1;
-    if (data_pay == "1") rozetka = 0;
+    if (data_pay == "1") rozetka = 1;
+    if (data_pay == "0") rozetka = 0;
     client.publish("dom/rozetkaotpravka", String(rozetka).c_str());
   }
   if ( String(topic) == podpiskanavklpc) {
